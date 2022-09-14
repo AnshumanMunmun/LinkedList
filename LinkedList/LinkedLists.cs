@@ -27,6 +27,20 @@ namespace LinkedList
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+        internal void AddInReverseOrder(int data)      // Add method for Reverse the order of created Linked List
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;                  //70
+                head = newNode;                         //30
+                head.next = temp;                       //30->70
+            }
+        }
         internal void Display()                         // Adding method for Display
         {
             Node temp = this.head;
