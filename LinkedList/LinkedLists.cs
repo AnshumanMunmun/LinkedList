@@ -85,6 +85,20 @@ namespace LinkedList
             Console.WriteLine("{0} Insert At Required Position into linked list", node.data);
             return head;
         }
+        public Node DeletingFirstPosition()            // Deletiong the First Position element form Linked List by using pop methord
+        {
+            Node node = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty: ");
+            }
+            else
+            {
+                head = head.next;
+            }
+            Console.WriteLine("{0} is the Deleted first Position element from linked list", node.data);
+            return node;
+        }
         internal void Display()                         // Adding method for Display
         {
             Node temp = this.head;
@@ -95,7 +109,7 @@ namespace LinkedList
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.WriteLine(temp.data + " currently available elements in list ");
                 temp = temp.next;
             }
         }
