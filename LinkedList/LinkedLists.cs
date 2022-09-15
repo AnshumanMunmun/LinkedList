@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LinkedList
 {
@@ -98,6 +99,24 @@ namespace LinkedList
             }
             Console.WriteLine("{0} is the Deleted first Position element from linked list", node.data);
             return node;
+        }
+        public void DeletingLastPosition()              // Deletiong the Last Position element form Linked List by using pop methord
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+            }
+            else
+            {
+                Node n = head;
+                while (n.next.next != null)
+                {
+                    n = n.next;
+                }
+                Node removeNode = n.next;
+                n.next = null;
+                Console.WriteLine("{0} is the Deleted Last Position element from linked list", removeNode.data);
+            }
         }
         internal void Display()                         // Adding method for Display
         {
