@@ -59,12 +59,38 @@ namespace LinkedList
             }
             Console.WriteLine("{0} appended into linked list", node.data);
         }
+        public Node InsertAtRequiredPosition(int position, int data)           // Ability to insert 30 between 56 and 70
+        {
+            Node node = new Node(data);
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+            Console.WriteLine("{0} Insert At Required Position into linked list", node.data);
+            return head;
+        }
         internal void Display()                         // Adding method for Display
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("linkedlist is empty");
+                Console.WriteLine("linked list is empty");
                 return;
             }
             while (temp != null)
