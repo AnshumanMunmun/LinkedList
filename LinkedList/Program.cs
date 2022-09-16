@@ -13,7 +13,7 @@
                 Console.WriteLine("Select Programs\n 1. Create LinkedList \n 2. Add Reversed order of Elements \n 3. Create LinkedList by Appending " +
                     " \n 4. Insert At Required Position \n 5. Deleting First Position Element \n 6. Deleting Last Position Element \n 7. Search the Node" +
                     " \n 8. Insert Node After Particular Node \n 9. Delete Node At Particular Position \n 10. Ascending Order Sort \n 11. Create Stack" +
-                    " \n 12.Peek and Pop from Stack \n 13.Create a Queue");
+                    " \n 12.Peek and Pop from Stack \n 13.Create a Queue \n 14. Dequeue from the beginning");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -91,6 +91,11 @@
                         queue.Enqueue(70);
                         queue.Display();
                         break;
+                    case 14:
+                        queue.Dequeue();
+                        queue.Display();
+                        break;
+
                 }
             }
         }

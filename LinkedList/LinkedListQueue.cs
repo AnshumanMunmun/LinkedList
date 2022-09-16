@@ -28,6 +28,22 @@ namespace LinkedList
             this.top = node;
             Console.WriteLine("{0} pushed to queue", value);
         }
+        internal void Dequeue()                                 //Dequeue operation of the list
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("queue is empty,Deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("valye Dequeue is {0}", this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+        }
         internal void Display()
         {
             Node temp = this.top;
