@@ -9,7 +9,8 @@
             while (flag)
             {
                 Console.WriteLine("Select Programs\n 1. Create LinkedList \n 2. Add Reversed order of Elements \n 3. Create LinkedList by Appending " +
-                    "\n 4. Insert At Required Position \n 5. Deleting First Position Element \n 6. Deleting Last Position Element");
+                    "\n 4. Insert At Required Position \n 5. Deleting First Position Element \n 6. Deleting Last Position Element \n 7. Search the Node" +
+                    " \n 8. Insert Node After Particular Node");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -52,6 +53,10 @@
                         break;
                     case 7:
                         list.Search(30);
+                        list.Display();
+                        break;
+                    case 8:
+                        list.InsertNodeAfterParticularNode(40, 30);
                         list.Display();
                         break;
                 }
