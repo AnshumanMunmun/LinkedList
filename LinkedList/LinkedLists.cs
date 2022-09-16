@@ -118,8 +118,29 @@ namespace LinkedList
                 Console.WriteLine("{0} is the Deleted Last Position element from linked list", removeNode.data);
             }
         }
-        internal void Display()                         // Adding method for Display
+        public int Search(int data)
         {
+            int count = 1;
+            Node temp = head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return count;
+                }
+                temp = temp.next;
+                count++;
+                Console.WriteLine("{0} is the available in linked list", temp.data);
+            }
+            return 0;
+        }
+        internal void Display()    // Adding method for Display
+        {
+
             Node temp = this.head;
             if (temp == null)
             {
@@ -132,5 +153,6 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        
     }
 }

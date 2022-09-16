@@ -50,6 +50,10 @@
                         list.DeletingLastPosition();
                         list.Display();
                         break;
+                    case 7:
+                        list.Search(30);
+                        list.Display();
+                        break;
                 }
             }
         }
