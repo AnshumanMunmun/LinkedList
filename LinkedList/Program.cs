@@ -10,8 +10,9 @@
             while (flag)
             {
                 Console.WriteLine("Select Programs\n 1. Create LinkedList \n 2. Add Reversed order of Elements \n 3. Create LinkedList by Appending " +
-                    "\n 4. Insert At Required Position \n 5. Deleting First Position Element \n 6. Deleting Last Position Element \n 7. Search the Node" +
-                    " \n 8. Insert Node After Particular Node \n 9. Delete Node At Particular Position \n 10. Ascending Order Sort \n 11. Create Stack");
+                    " \n 4. Insert At Required Position \n 5. Deleting First Position Element \n 6. Deleting Last Position Element \n 7. Search the Node" +
+                    " \n 8. Insert Node After Particular Node \n 9. Delete Node At Particular Position \n 10. Ascending Order Sort \n 11. Create Stack" +
+                    " \n 12.Peek and Pop from Stack");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -76,6 +77,11 @@
                         stack.Push(70);
                         stack.Push(30);
                         stack.Push(56);
+                        stack.Display();
+                        break;
+                    case 12:
+                        stack.Peek();
+                        stack.Pop();
                         stack.Display();
                         break;
                 }
